@@ -3,7 +3,7 @@ library(dplyr)
 
 #Reading in data
 classes<-c("character","character",rep("numeric",7))
-proj<-read.table("./household_power_consumption.txt",na.strings="?",colClasses=classes,nrows=100000,sep=";",header=TRUE)
+proj<-read.table("../data/household_power_consumption.txt",na.strings="?",colClasses=classes,nrows=100000,sep=";",header=TRUE)
 
 #Filtering down to the desired dates
 final<-filter(proj,grepl("^[12]/2/2007",proj$Date))
