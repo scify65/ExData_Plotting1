@@ -14,5 +14,5 @@ final<-cbind(final,dateTime)
 final$dateTime<-as.POSIXlt(final$dateTime,format="%d/%m/%Y %H:%M:%S")
 
 png(file="plot1.png")
-hist(final$Global_active_power,col="red",xlab="Global Active Power (kilowatts)",ylab="Frequency",main="Global Active Power",breaks=8)
+hist(final$Global_active_power,col="red",xlab="Global Active Power (kilowatts)",ylab="Frequency",main="Global Active Power",breaks=12)
 dev.off()
